@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const NAV_ITEMS = [
@@ -24,37 +25,22 @@ export default function Header() {
 
   return (
     <header
-      className={`transition-colors duration-300 ${
+      className={`sticky top-0 z-50 transition-colors duration-300 ${
         scrolled
           ? 'border-b border-line/70 bg-background/85 backdrop-blur-md'
           : 'border-b border-transparent bg-transparent'
       }`}
     >
       <div className="mx-auto flex h-[76px] max-w-[1240px] items-center justify-between px-6 sm:px-8 lg:px-10">
-        <a href="#top" className="flex items-center gap-2.5">
-          <span className="flex h-9 w-9 items-center justify-center rounded-full bg-rose-strong text-white">
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M12 20.5s-7.5-4.6-10-9.4C.4 7.8 2 4 5.8 3.4 8.2 3 10.4 4.1 12 6.3c1.6-2.2 3.8-3.3 6.2-2.9C22 4 23.6 7.8 22 11.1c-2.5 4.8-10 9.4-10 9.4Z"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
-          <span
-            className={`text-[19px] font-bold tracking-tight text-foreground transition-[text-shadow] duration-300 ${
-              scrolled ? '' : '[text-shadow:0_1px_6px_rgba(255,255,255,0.75)]'
-            }`}
-          >
-            마음그린다
-          </span>
+        <a href="#top" className="flex items-center">
+          <Image
+            src="/simbal.png"
+            alt="마음그린다"
+            width={171}
+            height={162}
+            priority
+            className="h-11 w-auto"
+          />
         </a>
 
         <nav className="hidden items-center gap-8 lg:flex">

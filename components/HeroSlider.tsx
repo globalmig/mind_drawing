@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 const SLIDES = [
-  { src: '/images/hero.png', alt: '마음드로잉 심리상담센터 이미지 1' },
-  { src: '/images/hero2.png', alt: '마음드로잉 심리상담센터 이미지 2' },
+  { src: '/images/hero.webp', alt: '마음드로잉 심리상담센터 이미지 1' },
+  { src: '/images/hero2.webp', alt: '마음드로잉 심리상담센터 이미지 2' },
 ];
 
 export default function HeroSlider() {

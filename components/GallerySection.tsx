@@ -8,11 +8,11 @@ const SCENES = [
   { label: "마음그린다 입구", src: "/images/room (5).webp" },
 ];
 
-const LOOP_SCENES = [...SCENES, ...SCENES];
+const LOOP_SCENES = [...SCENES, ...SCENES, ...SCENES, ...SCENES];
 
 export default function GallerySection() {
   return (
-    <section className="bg-surface py-24">
+    <section className="bg-brand-mist py-24">
       <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-[13px] font-bold tracking-wide text-blue-strong">
@@ -38,6 +38,7 @@ export default function GallerySection() {
                 src={scene.src}
                 alt={scene.label}
                 fill
+                loading="eager"
                 sizes="240px"
                 className="object-cover"
               />

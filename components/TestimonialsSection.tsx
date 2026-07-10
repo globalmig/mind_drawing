@@ -31,7 +31,10 @@ const REVIEWS = [
 
 export default function TestimonialsSection() {
   return (
-    <section id="reviews" className="bg-rose-soft py-24">
+    <section
+      id="reviews"
+      className="bg-brand-mist bg-[linear-gradient(rgba(255,255,255,0.72),rgba(255,255,255,0.72)),url('/images/bg_ground.webp')] bg-cover bg-center bg-no-repeat py-24"
+    >
       <div className="mx-auto max-w-[1240px] px-6 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <p className="text-[13px] font-bold tracking-wide text-blue-strong">
